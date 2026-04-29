@@ -1,0 +1,10 @@
+{
+  "name": "nolvews-dashboard-server",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "fs-extra": "^11.2.0",
+    "pg": "^8.18.0",
+    "js-yaml": "^4.1.0"
+  }
+}

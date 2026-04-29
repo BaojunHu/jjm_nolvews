@@ -1,0 +1,102 @@
+---
+description: 质量检查：对比概要与正文，检测一致性和AI味
+argument-hint: [章节号] [--range start-end]
+recommended-model: claude-sonnet-4-5-20250929
+allowed-tools: Read(//stories/**), Read(//resources/anti-ai.md), Bash(ls:*), Bash(python:scripts/*)
+---
+
+用户输入：$ARGUMENTS
+
+## 目标
+
+对已扩写的章节进行质量检查，输出分析报告到终端。
+
+## 参数解析
+
+- 章节号：分析单章
+- `--range start-end`：批量分析章节范围（如 `--range 1-20`）
+
+## 卷定位
+
+根据章节号和 `stories/<story>/creative-plan.md` 确定目标章节所属卷（如 `vol-001`）。
+
+## 资源加载
+
+- 目标章节正文：`stories/<story>/volumes/vol-XXX/content/chapter-YYY.md`
+- 对应概要：`stories/<story>/volumes/vol-XXX/content/chapter-YYY-synopsis.md`
+- 卷级 tracking：`stories/<story>/volumes/vol-XXX/tracking/character-state.json`、`stories/<story>/volumes/vol-XXX/tracking/plot-tracker.json`
+
+**DB 增强模式**：如果 `resources/config.json` 中 `database.enabled = true`，可用 DB 上下文替代 tracking 文件读取：
+
+```
+python scripts/db_context.py --chapter <全局章节号> --mode analyze
+```
+
+输出包含本章伏笔检查清单、角色状态基准、时间线连续性和一致性警告。输出还包含主角能力基准（技能习得时间线 + 道具持有状态），用于检测正文中是否使用了尚未习得的技能或不持有的道具。
+
+## 检查项（5项）
+
+### 1. 概要符合度
+对比正文与概要，检查：
+- 概要中的核心事件是否都在正文中体现
+- 出场角色是否一致
+- 情感走向是否一致
+- 章末钩子是否落地
+
+评分：✅ 完全符合 / ⚠️ 部分偏离 / ❌ 严重偏离
+
+### 2. 角色一致性
+对比正文中角色行为与 tracking 中的角色状态：
+- 角色性格是否一致（有无 OOC）
+- 角色位置是否合理
+- 角色关系互动是否符合 tracking 记录
+
+评分：✅ / ⚠️ / ❌
+
+### 3. 伏笔完整性
+对比 plot-tracker 中标记的伏笔：
+- 本章应埋设的伏笔是否在正文中体现
+- 本章应回收的伏笔是否已回收
+- 是否有遗漏
+
+评分：✅ / ⚠️ / ❌
+
+### 4. 连贯性
+检查与前后章的衔接：
+- 开头是否与前一章结尾自然衔接
+- 时间线是否连续
+- 场景转换是否合理
+
+评分：✅ / ⚠️ / ❌
+
+### 5. AI味检测
+读取 `resources/anti-ai.md` 的禁用词表，对照正文检查：
+- AI高频词使用（对照禁用词汇清单逐项检查）
+- 句式重复度（连续相同结构、段落开头重复）
+- 空洞描写比例
+- 段落结构单一性（是否全部 3-4 句等长段落）
+
+评分：✅ 自然 / ⚠️ 轻微AI味 / ❌ 明显AI味
+
+## 输出格式
+
+直接输出到终端，不生成文件：
+
+```
+## 第X章 质量分析报告
+
+| 检查项 | 评分 | 说明 |
+|--------|------|------|
+| 概要符合度 | ✅ | ... |
+| 角色一致性 | ⚠️ | ... |
+| 伏笔完整性 | ✅ | ... |
+| 连贯性 | ✅ | ... |
+| AI味检测 | ⚠️ | ... |
+
+### 需要关注的问题
+1. [具体问题和建议]
+
+### 后续建议
+- 如有 ⚠️ 或 ❌：建议手动修改正文后重新 /analyze
+- 全部 ✅：可以继续扩写下一章
+```
