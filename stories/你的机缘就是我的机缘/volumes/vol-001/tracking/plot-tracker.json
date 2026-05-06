@@ -1,0 +1,164 @@
+{
+  "volume": "vol-001",
+  "currentChapter": 100,
+  "plotlines": [
+    {
+      "name": "共享契约漏洞测试",
+      "status": "active",
+      "description": "林逸围绕实际承受者条款建立稳定改写策略并在卷尾完成最小代价终盘",
+      "keyChapters": [1, 2, 6, 10, 16, 20, 28, 33, 36, 40, 50, 58, 79, 99]
+    },
+    {
+      "name": "气运猎手围堵线",
+      "status": "active",
+      "description": "周砚线由围堵转协作，魇火阁仍是高风险外压来源",
+      "keyChapters": [5, 8, 11, 17, 19, 26, 37, 44, 57, 65, 71, 86, 93]
+    },
+    {
+      "name": "宗门内部施压线",
+      "status": "active",
+      "description": "宗门高层在白烛与审衡之间持续分裂，流程战成为主战形态",
+      "keyChapters": [12, 23, 24, 31, 42, 45, 55, 74, 81, 91]
+    },
+    {
+      "name": "除名序列真相",
+      "status": "active",
+      "description": "样本零号与远古协议持续揭示，林逸体质来源逐步清晰",
+      "keyChapters": [10, 18, 32, 48, 51, 59, 69, 84, 90, 100]
+    },
+    {
+      "name": "苏沐晴死劫提前",
+      "status": "active",
+      "description": "死劫窗口不断前移，已与主契和代偿发生高耦合",
+      "keyChapters": [1, 19, 35, 52, 60, 67, 76, 87, 96, 100]
+    },
+    {
+      "name": "白烛权限体系",
+      "status": "active",
+      "description": "白烛从清除执行扩展到替换与叙事控制，卷尾受挫但未瓦解",
+      "keyChapters": [22, 27, 31, 36, 42, 50, 62, 66, 77, 89, 97]
+    },
+    {
+      "name": "绝缘代偿机制",
+      "status": "active",
+      "description": "代偿由隐性代价转为可管理变量，第三版模型成型但上限未知",
+      "keyChapters": [34, 35, 39, 46, 58, 67, 88, 95, 99]
+    },
+    {
+      "name": "样本替换计划",
+      "status": "active",
+      "description": "系统尝试以替代体绕开林逸不可清除属性，卷尾仍在运行",
+      "keyChapters": [52, 53, 54, 56, 63, 72, 73, 82, 89, 97]
+    },
+    {
+      "name": "镜渊对局",
+      "status": "resolved",
+      "description": "镜渊主战完成阶段结算，团队拿到解释权并重创白烛信誉",
+      "keyChapters": [57, 60, 61, 70, 75, 78, 80]
+    },
+    {
+      "name": "内门考核夜终盘",
+      "status": "resolved",
+      "description": "考核夜完成卷一终盘改写，代价与收益实现阶段闭环",
+      "keyChapters": [94, 96, 97, 98, 99, 100]
+    }
+  ],
+  "foreshadowing": [
+    {
+      "id": "FS-001",
+      "content": "契约小字是林逸反向套利核心",
+      "plantedAt": 1,
+      "status": "resolved",
+      "resolveAt": 99
+    },
+    {
+      "id": "FS-002",
+      "content": "林逸不在常规因果检测范围",
+      "plantedAt": 1,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-003",
+      "content": "黑市与秘境背后存在统一买家网络",
+      "plantedAt": 8,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-004",
+      "content": "除名序列关联天道底层规则",
+      "plantedAt": 10,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-005",
+      "content": "苏沐晴死劫可被外部观测并操控",
+      "plantedAt": 19,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-006",
+      "content": "天道监测对林逸触发异常锁定阈值",
+      "plantedAt": 20,
+      "status": "resolved",
+      "resolveAt": 100
+    },
+    {
+      "id": "FS-007",
+      "content": "白烛是权限体系而非单体角色",
+      "plantedAt": 27,
+      "status": "resolved",
+      "resolveAt": 62
+    },
+    {
+      "id": "FS-008",
+      "content": "绝缘获利存在延迟代偿",
+      "plantedAt": 35,
+      "status": "resolved",
+      "resolveAt": 58
+    },
+    {
+      "id": "FS-009",
+      "content": "异常样本将被上传至更高监测域",
+      "plantedAt": 40,
+      "status": "resolved",
+      "resolveAt": 100
+    },
+    {
+      "id": "FS-010",
+      "content": "样本零号闻衡可能仍有投影影响",
+      "plantedAt": 48,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-011",
+      "content": "系统通过替换样本绕开不可清除属性",
+      "plantedAt": 52,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-012",
+      "content": "镜渊与替换流程重叠，需争夺解释权",
+      "plantedAt": 57,
+      "status": "resolved",
+      "resolveAt": 80
+    },
+    {
+      "id": "FS-013",
+      "content": "主契第三纹路并非模板内产物",
+      "plantedAt": 88,
+      "status": "planted"
+    },
+    {
+      "id": "FS-014",
+      "content": "闻衡留言中的回退条件可撬动最终替换权限",
+      "plantedAt": 90,
+      "status": "hinted"
+    },
+    {
+      "id": "FS-015",
+      "content": "残缺除名名单显示异常样本不止林逸一人",
+      "plantedAt": 100,
+      "status": "planted"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "volume": "vol-001",
+  "lastUpdatedChapter": 100,
+  "characters": [
+    {
+      "name": "林逸",
+      "role": "主角",
+      "status": "活跃",
+      "location": "宗门内门",
+      "state": "完成卷一终盘最小代价改写，代偿上限表稳定为第三版，但已被更高监测域编号锁定",
+      "lastAppearance": 100
+    },
+    {
+      "name": "苏沐晴",
+      "role": "女主",
+      "status": "活跃",
+      "location": "宗门内门",
+      "state": "死劫窗口持续提前，主契第三纹路固化，仍维持高强度协作与承压",
+      "lastAppearance": 100
+    },
+    {
+      "name": "韩执事",
+      "role": "宗门流程线",
+      "status": "活跃",
+      "location": "任务堂",
+      "state": "维持流程中立，持续提供关键文书与备案入口",
+      "lastAppearance": 91
+    },
+    {
+      "name": "周砚",
+      "role": "气运猎手转合作方",
+      "status": "活跃",
+      "location": "宗门外线",
+      "state": "完成试忠后进入可执行协作层，负责外线拦截与黑市补给",
+      "lastAppearance": 99
+    },
+    {
+      "name": "顾青禾",
+      "role": "内链执行核心",
+      "status": "活跃",
+      "location": "宗门内门",
+      "state": "掌控报名链和回传链，成为团队内侧稳定器",
+      "lastAppearance": 99
+    },
+    {
+      "name": "秦烈",
+      "role": "执法殿长老",
+      "status": "活跃",
+      "location": "执法殿",
+      "state": "在白烛与宗门高层博弈中失去部分主动，但仍保留关键影响力",
+      "lastAppearance": 98
+    },
+    {
+      "name": "宁无缺",
+      "role": "黑市管事",
+      "status": "活跃",
+      "location": "青石镇黑市",
+      "state": "维持交易中立，作为周砚线的外围补给节点",
+      "lastAppearance": 57
+    },
+    {
+      "name": "沈烬",
+      "role": "魇火阁使者",
+      "status": "活跃",
+      "location": "魇火阁外线",
+      "state": "与林逸保持条件合作，提供部分替换计划情报",
+      "lastAppearance": 93
+    },
+    {
+      "name": "烛影",
+      "role": "白烛高阶执行者",
+      "status": "活跃",
+      "location": "宗门与监测域接口",
+      "state": "镜渊与考核夜连续受挫，仍掌握高危替换权限",
+      "lastAppearance": 100
+    },
+    {
+      "name": "陆观",
+      "role": "白烛外围中间人",
+      "status": "退场",
+      "location": "外门库房线",
+      "state": "身份暴露后死亡，留下结算权限线索",
+      "lastAppearance": 22
+    },
+    {
+      "name": "司空厄",
+      "role": "上级审衡使",
+      "status": "活跃",
+      "location": "宗门审衡线",
+      "state": "以控局为先制衡白烛，和林逸维持条件互用关系",
+      "lastAppearance": 100
+    },
+    {
+      "name": "闻衡",
+      "role": "疑似样本零号",
+      "status": "未知",
+      "location": "监测域线索层",
+      "state": "通过留言与回声持续影响现行替换机制，真实状态未明",
+      "lastAppearance": 90
+    }
+  ]
+}
