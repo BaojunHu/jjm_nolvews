@@ -1,0 +1,47 @@
+---
+name: "specify"
+description: "定义故事规格，明确要创造什么样的作品。Invoke when user wants to define story specifications and create the foundation for a new story."
+---
+
+# Specify
+
+## 目标
+
+交互式引导用户定义故事的核心要素，输出 specification.md。
+
+## 资源加载
+
+读取 `resources/constitution.md`（如存在）作为创作原则参考。
+
+## 执行步骤
+
+### 1. 确定故事目录
+
+- 如果 `stories/` 下已有故事目录，列出并询问是更新还是新建
+- 新建时，根据用户输入生成目录名
+- 确保 `stories/<story>/content/` 目录存在
+
+### 2. 交互式引导
+
+逐项引导用户定义以下内容：
+
+1. **故事类型**：玄幻/都市/言情/悬疑/科幻/历史/其他
+2. **一句话概要**：30字以内的核心创意
+3. **核心设定**：世界观、力量体系等关键设定（2-3句）
+4. **主角**：姓名、身份、核心性格、初始目标（3-5句）
+5. **核心配角**：2-5个关键配角，每人1-2句描述
+6. **核心冲突**：主线矛盾是什么（2-3句）
+7. **目标规模**：预计总章数、分几卷
+8. **写作风格偏好**：叙述视角、语言风格、节奏偏好
+
+### 3. 生成 specification.md
+
+将收集的信息整理为结构化的 specification.md，写入 `stories/<story>/specification.md`。
+
+### 4. 生成风格参考
+
+根据用户的风格偏好自动填充 style-reference.md。
+
+## 后续建议
+
+输出：「规格定义完成。下一步请使用 /plan 生成卷级大纲。」
